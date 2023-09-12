@@ -11,16 +11,8 @@ class Text
         const char* textArray;
         int textLength;
     public:
-        Text(const char c[])
-        {
-            textArray = new char[textLength];
-            textArray = c;
-        }
-        ~Text()
-        {
-            delete [] textArray;
-            cout << "Text destructor: Released memory for textArray.";
-        }
+        Text(const char c[]);
+        ~Text();
         void displayText();
         const char* getText() const;
         int getLength() const;
