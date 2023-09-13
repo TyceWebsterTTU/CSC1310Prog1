@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <fstream>
 #include "text.h"
 using namespace std;
 
@@ -14,11 +15,11 @@ class VideoGame
         Text* publisher;
         int year;
     public:
-        VideoGame(Text* title, Text* developer, Text* publisher, int year);
+        VideoGame(Text* title, Text* developer, Text* publisher, int year = 0);
         ~VideoGame();
-        void printVideoGameDetails();
-        void printVideoGameDetailsToFile(ofstream &outFile);
-        string getVideoGameTitle();
+        void printVideoGameDetails() const;
+        void printVideoGameDetailsToFile(ofstream &outFile) const;
+        string getVideoGameTitle() const;
 };
 
 #endif
