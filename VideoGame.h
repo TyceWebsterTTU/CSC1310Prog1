@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <iomanip>
 #include <fstream>
 #include "text.h"
 using namespace std;
@@ -19,7 +20,7 @@ class VideoGame
         ~VideoGame();
         void printVideoGameDetails() const;
         void printVideoGameDetailsToFile(ofstream &outFile) const;
-        string getVideoGameTitle() const;
+        Text* getVideoGameTitle() const;
 };
 
 #endif

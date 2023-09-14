@@ -4,7 +4,6 @@
 #include <iostream>
 #include <string>
 #include <fstream>
-#include "text.h"
 #include "VideoGame.h"
 using namespace std;
 
