@@ -2,9 +2,9 @@
 #define VIDEOGAMELIBRARY_H
 
 #include <iostream>
+#include <iomanip>
 #include <string>
 #include <fstream>
-#include "text.h"
 #include "VideoGame.h"
 using namespace std;
 
@@ -19,11 +19,11 @@ class VideoGameLibrary
         VideoGameLibrary(int max);
         ~VideoGameLibrary();
         void addVideoGameToArray();
-        void displayVideoGames() const;
-        void displayVideoGameTitles() const;
-        void loadVideoGamesFromFile(const char* fileName);
+        void displayVideoGames();
+        void displayVideoGameTitles();
+        void loadVideoGamesFromFile(char* fileName);
         void removeVideoGameFromArray();
-        void saveToFile(const char* file);
+        void saveToFile(char* fileName);
 };
 
 #endif

@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <iomanip>
 #include <fstream>
 #include "text.h"
 using namespace std;
@@ -17,9 +18,9 @@ class VideoGame
     public:
         VideoGame(Text* title, Text* developer, Text* publisher, int year = 0);
         ~VideoGame();
-        void printVideoGameDetails() const;
-        void printVideoGameDetailsToFile(ofstream &outFile) const;
-        string getVideoGameTitle() const;
+        void printVideoGameDetails();
+        void printVideoGameDetailsToFile(ofstream &outFile);
+        Text* getVideoGameTitle() const;
 };
 
 #endif

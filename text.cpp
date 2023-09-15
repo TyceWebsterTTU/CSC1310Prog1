@@ -3,8 +3,9 @@
 Text::Text(const char* c)
 {
     textLength = strlen(c);
-    textArray = new char[textLength + 1];
+    char* temp = new char[textLength + 1];
     strcpy(textArray, c);
+    this->textArray = temp;
 }
 
 Text::~Text()
