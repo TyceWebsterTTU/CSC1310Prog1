@@ -4,7 +4,7 @@ Text::Text(const char* c)
 {
     textLength = strlen(c);
     char* temp = new char[textLength + 1];
-    strcpy(textArray, c);
+    strcpy (temp, c);
     this->textArray = temp;
 }
 
@@ -12,7 +12,7 @@ Text::~Text()
 {
     delete [] textArray;
 
-    cout << "Text destructor: Released memory for textArray.";
+    cout << "Text destructor: Released memory for textArray.\n";
 }
 
 void Text::displayText()

@@ -5,7 +5,7 @@ VideoGameLibrary::VideoGameLibrary(int max)
 {
     maxGames = max;
     numGames = 0;
-    videoGamesArray = new VideoGame*[max];
+    videoGamesArray = new VideoGame*[maxGames];
 }
 
 VideoGameLibrary::~VideoGameLibrary()
@@ -22,7 +22,7 @@ VideoGameLibrary::~VideoGameLibrary()
 void VideoGameLibrary::resizeVideoGamesArray()
 {
     int max = maxGames * 2;
-    cout << "\nResizing videoGamesArray from " << maxGames << " to " << max << "." << endl;
+    cout << "\nResizing videoGamesArray from " << maxGames << " to " << max << ".";
     VideoGame** newArry= new VideoGame*[max];
     for(int i=0; i< numGames; i++)
     {
@@ -36,6 +36,11 @@ void VideoGameLibrary::resizeVideoGamesArray()
 
 void VideoGameLibrary::addVideoGameToArray()
 {
+    if(numGames==maxGames)
+    {
+        resizeVideoGamesArray();
+    }
+
     char temp[100];
     Text* title;
     Text* dev;
@@ -44,6 +49,7 @@ void VideoGameLibrary::addVideoGameToArray()
 
     //Recieve user input
     cout << "\nVideo Game TITLE:  ";
+    cin.ignore();
     cin.getline(temp, 100);
     title = new Text(temp);
 
@@ -55,7 +61,6 @@ void VideoGameLibrary::addVideoGameToArray()
     cin.getline(temp, 100);
     pub = new Text(temp);
 
-    cin.ignore();
     cout << "\nVideo Game YEAR:  ";
     cin >> y;
 
@@ -77,7 +82,7 @@ void VideoGameLibrary::displayVideoGames()
 {
     for(int i = 0; i < numGames; i++)
     {
-        cout<<setw(34)<<"\n--------Video Game "<<i+1<<"--------";
+        cout<<"\n\n"<<right<<setw(25)<<" "<<"--------Video Game "<<i+1<<"--------";
         videoGamesArray[i]->printVideoGameDetails();
     }
 }
@@ -132,42 +137,19 @@ void VideoGameLibrary::loadVideoGamesFromFile(char* fileName)
 
             cout << endl;
             title->displayText();
-            cout << " was added successfully\n";
+            cout << " was added successfully.";
 
             inFile.getline(temp, 100);
             numGamesFromFile++;
         }
 
-        cout << "\n" << numGamesFromFile << " video games were read from the file and added to your VideoGame library.\n";
+        cout << "\n\n" << numGamesFromFile << " video games were read from the file and added to your VideoGame library.\n";
     }
     else
     {
         cout << "\nSorry, I was unable to open the file.\n";
     }
-    /*string s=fileName;
-    ifstream inFile;
-    string t,d,p;
-    const char *ti,*de,*pu;
-    int y;
-
-    inFile.open(fileName);
-    if(inFile.bad()){
-        cout<<"Sorry, I was unable to open the file.\n";
-        return;
-    }
-
-    do
-    {
-        getline(inFile,t);
-        ti=t.c_str();
-
-        getline(inFile,d);
-        de=d.c_str();
-
-        getline(inFile,p);
-        pu=p.c_str();
-        //Not finished
-    } while (!inFile.fail());*/
+    
 }
 
 void VideoGameLibrary::removeVideoGameFromArray()
@@ -196,7 +178,7 @@ void VideoGameLibrary::removeVideoGameFromArray()
 
     cout << "\n\nThe video game \"";
     gameTitle->displayText();
-    cout << "\" has been successfully deleted.\n";
+    cout << "\" has been successfully deleted.\n\n";
 
     delete videoGamesArray[indexRemoved];
 

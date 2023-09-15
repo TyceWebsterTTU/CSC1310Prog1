@@ -20,13 +20,13 @@ VideoGame::~VideoGame()
 
 void VideoGame::printVideoGameDetails()
 {
-    cout<<setw(34)<<right<<"\nGame Title:"<<left<<"\t";
+    cout<<"\n\n"<<right<<setw(23)<<"Game Title:"<<left<<"   ";
     title->displayText();
-    cout<<setw(34)<<right<<"\nDeveloper:"<<left<<"\t";
+    cout<<"\n\n"<<right<<setw(23)<<"Developer:"<<left<<"   ";
     developer->displayText();
-    cout<<setw(34)<<right<<"\nPublisher:"<<left<<"\t";
+    cout<<"\n\n"<<right<<setw(23)<<"Publisher:"<<left<<"   ";
     publisher->displayText();
-    cout<<setw(34)<<right<<"\nYear Released:"<<left<<"\t";
+    cout<<"\n\n"<<right<<setw(23)<<"Year Released:"<<left<<"   ";
     cout<<year<<endl;
 }
 
@@ -40,19 +40,7 @@ void VideoGame::printVideoGameDetailsToFile(ofstream &outFile)
     outFile << temp << endl;
     strncpy(temp, publisher->getText(), 100);
     outFile << temp << endl;
-    outFile << year << endl;
-    /*string name;
-    cout<<"\nWhat do you want to name this file?";
-    getline(cin,name);
-
-    outFile.open(name);
-    if(!outFile.is_open())
-    {
-        cout<<"How did you manage this?";
-        return;
-    }
-    outFile<<title->getText()<<"\n"<<developer->getText()<<"\n"<<publisher->getText()<<"\n"<<year<<endl;
-    outFile.close();*/
+    outFile << year;
 }
 
 Text* VideoGame::getVideoGameTitle() const

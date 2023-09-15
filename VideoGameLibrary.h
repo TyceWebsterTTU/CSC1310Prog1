@@ -15,9 +15,9 @@ class VideoGameLibrary
         int maxGames;
         int numGames;
     public:
-        void resizeVideoGamesArray();
         VideoGameLibrary(int max);
         ~VideoGameLibrary();
+        void resizeVideoGamesArray();
         void addVideoGameToArray();
         void displayVideoGames();
         void displayVideoGameTitles();
