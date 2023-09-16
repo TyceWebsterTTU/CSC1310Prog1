@@ -1,31 +1,45 @@
+/*
+	Title:  text.cpp
+	Author:  Tyce Webster & Isaac Essex
+	Date:  9/16/2023
+	Purpose:  Create a video game library that creates, stores, and displays user data
+*/
+
+//Header file
 #include "text.h"
 
-Text::Text(const char* c)
+//Constructor that is called automatically when Text object is created, dynamically allocates a character array passed to function
+Text::Text(const char* c) //Function parameters
 {
-    textLength = strlen(c);
-    char* temp = new char[textLength + 1];
-    strcpy(textArray, c);
-    this->textArray = temp;
+    textLength = strlen(c); //Gets the length of the string passed to the function
+    char* temp = new char[textLength + 1]; //Dynamically allocates new character string to size of string
+    strcpy (temp, c); //Puts c into the new temp value
+    this->textArray = temp; //Sets the textArray attribute to new temp cstring
 }
 
+//Deconstructor that releases the memory for the cstring pointed to by textArray
 Text::~Text()
 {
+    //Releases dynamically allocated textArray
     delete [] textArray;
 
-    cout << "Text destructor: Released memory for textArray.";
+    cout << "Text destructor: Released memory for textArray.\n";
 }
 
+//displayText function that prints textArray to the screen
 void Text::displayText()
 {
         cout << textArray;
 }
 
+//Accessor function to get the data for the textArray
 const char* Text::getText() const
 {
-    return textArray;
+    return textArray; //Returns a pointer to textArray
 }
 
+//Accessor function to get the length for textLength
 int Text::getLength() const
 {
-    return textLength;
+    return textLength; //Returns the length of the string
 }
