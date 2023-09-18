@@ -1,8 +1,11 @@
 /*
 	Title:  text.cpp
 	Author:  Tyce Webster & Isaac Essex
+    Course: CSC 1310-001
 	Date:  9/16/2023
-	Purpose:  Create a video game library that creates, stores, and displays user data
+    Due: 9/18/2023
+	Purpose: Create and store an array of characters because we're simply 
+    too pretentious to use a string.
 */
 
 //Header file

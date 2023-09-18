@@ -1,8 +1,11 @@
 /*
 	Title:  VideoGameLibrary.cpp
 	Author:  Tyce Webster & Isaac Essex
+    Course: CSC 1310-001
 	Date:  9/16/2023
-	Purpose:  Create a video game library that creates, stores, and displays user data
+    Due: 9/18/2023
+	Purpose:  Create a video game library that creates, stores, and displays 
+    user data. Functions for the VideoGameLibrary Class are also defined here.
 */
 //Header files
 #include "VideoGameLibrary.h"

@@ -1,8 +1,13 @@
 /*
 	Title:  VideoGame.cpp
 	Author:  Tyce Webster & Isaac Essex
+    Course: CSC 1310-001
 	Date:  9/16/2023
-	Purpose:  Create a video game library that creates, stores, and displays user data
+    Due: 9/18/2023
+	Purpose:  Create an object that is conceptualized as a video game. This
+    oject stores information about the game's title, developer, publisher,
+    and year of release. This .cpp also defines functions associated with 
+    the VideoGame class.
 */
 
 //Header files

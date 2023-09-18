@@ -1,13 +1,17 @@
 /*
 	Title:  Program1.cpp
 	Author:  Tyce Webster & Isaac Essex
+    Course: CSC 1310-001
 	Date:  9/16/2023
-	Purpose:  Create a video game library that creates, stores, and displays user data
+    Due: 9/18/2023
+	Purpose: Format an interactive user menu that allows the user to create
+    and modify a video game library where they can save and load games from 
+    a file, add or remove games from the library, and display all of the
+    library's games a list for easy reading
+
 */
 //Header files
 #include "VideoGameLibrary.h"
-#include "VideoGame.h"
-#include "text.h"
 
 //Main function
 int main()

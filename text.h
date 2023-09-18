@@ -1,8 +1,11 @@
 /*
 	Title:  text.h
 	Author:  Tyce Webster & Isaac Essex
+    Course: CSC 1310-001
 	Date:  9/16/2023
-	Purpose:  Create a video game library that creates, stores, and displays user data
+    Due: 9/18/2023
+	Purpose: Include nescessary libraries, declare member variables, 
+    and declare member functions for the Text Class.
 */
 
 //Header libraries
